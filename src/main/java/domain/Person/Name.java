@@ -6,7 +6,7 @@ import util.BusinessValidation;
 public class Name implements ValueObject {
     private final String _name;
 
-    public Name(String name){
+    protected Name(String name){
         BusinessValidation.nonEmpty(name,"person name should neither be null nor empty");
         this._name=name;
     }
@@ -16,7 +16,7 @@ public class Name implements ValueObject {
         this._name=null;
     }
 
-    public String name(){
+    protected String name(){
         return this._name;
     }
 

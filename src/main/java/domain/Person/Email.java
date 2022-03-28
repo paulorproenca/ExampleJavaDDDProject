@@ -6,7 +6,7 @@ import util.BusinessValidation;
 public class Email implements ValueObject {
     private final String _email;
 
-    public Email(String email){
+    protected Email(String email){
         BusinessValidation.nonEmpty(email,"email address  should neither be null nor empty");
         BusinessValidation.isEmail(email,"Invalid E-mail format");
         this._email=email;
@@ -17,7 +17,7 @@ public class Email implements ValueObject {
         this._email=null;
     }
 
-    public String email(){
+    protected String email(){
         return this._email;
     }
 }
