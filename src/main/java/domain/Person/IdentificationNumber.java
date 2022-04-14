@@ -4,7 +4,9 @@ import domain.shared.Identifiable;
 import domain.shared.ValueObject;
 import util.BusinessValidation;
 import util.HashCoder;
+import javax.persistence.Embeddable;
 
+@Embeddable
 public class IdentificationNumber implements ValueObject, Comparable<IdentificationNumber> {
 
     private final String _idNumber;

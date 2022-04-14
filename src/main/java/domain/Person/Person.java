@@ -1,8 +1,13 @@
 package domain.Person;
 
 import domain.shared.AggregateRoot;
+import javax.persistence.*;
 
+@Entity
 public class Person implements AggregateRoot<IdentificationNumber> {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private IdentificationNumber _identificationNumber;
     private Name _nome;
     private Email _email;

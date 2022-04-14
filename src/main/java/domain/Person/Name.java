@@ -2,7 +2,9 @@ package domain.Person;
 
 import domain.shared.ValueObject;
 import util.BusinessValidation;
+import javax.persistence.Embeddable;
 
+@Embeddable
 public class Name implements ValueObject {
     private final String _name;
 
