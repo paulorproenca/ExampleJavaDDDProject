@@ -8,12 +8,16 @@
     <!--exclude-unlisted-classes>false</exclude-unlisted-classes-->
     <class>domain.Person.Person</class>
     <properties>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@vsrvbd1.dei.isep.ipp.pt:1521/pdborcl" />
+      <property name="javax.persistence.jdbc.user" value="PRP"/>
+      <property name="javax.persistence.jdbc.password" value="qwerty"/>
 
-      <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
-      <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/db/rac"/>
+      <!--property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/db/upskillDB"/>
   
-      <property name="javax.persistence.jdbc.user" value="anc"/>
-      <property name="javax.persistence.jdbc.password" value="anc"/>
+      <property name="javax.persistence.jdbc.user" value="upskill"/>
+      <property name="javax.persistence.jdbc.password" value="upskill"/-->
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
 
     </properties>

@@ -8,14 +8,14 @@ public class Person implements AggregateRoot<IdentificationNumber> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private IdentificationNumber _identificationNumber;
-    private Name _nome;
-    private Email _email;
+    private IdentificationNumber personidentificationNumber;
+    private Name personName;
+    private Email personEmail;
 
     public Person(String identificationNumber, String name, String email){
-        this._identificationNumber = new IdentificationNumber(identificationNumber);
-        this._nome = new Name(name);
-        this._email = new Email(email);
+        this.personidentificationNumber = new IdentificationNumber(identificationNumber);
+        this.personName = new Name(name);
+        this.personEmail = new Email(email);
     }
 
     /* For ORM purposes */
@@ -28,12 +28,12 @@ public class Person implements AggregateRoot<IdentificationNumber> {
 
     @Override
     public IdentificationNumber identity() {
-        return this._identificationNumber;
+        return this.personidentificationNumber;
     }
 
     public String toString()
     {
-        return "Person( " + this._nome.name() + " | " + this._email.email() +  " | " + this._identificationNumber.toString() + " )";
+        return "Person( " + this.personName.name() + " | " + this.personEmail.email() +  " | " + this.personidentificationNumber.toString() + " )";
     }
 }
 

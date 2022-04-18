@@ -9,7 +9,7 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class IdentificationNumber implements ValueObject, Comparable<IdentificationNumber> {
 
-    private final String _idNumber;
+    private final String theIdNumber;
 
     /**
      * Protected constructor. To construct a new IdentificationNumber instance use the
@@ -19,12 +19,12 @@ public class IdentificationNumber implements ValueObject, Comparable<Identificat
      */
     protected IdentificationNumber(final String idNumber) {
         BusinessValidation.nonEmpty(idNumber,"identification number should neither be null nor empty");
-        this._idNumber = idNumber;
+        this.theIdNumber = idNumber;
     }
 
     // for ORM
     protected IdentificationNumber() {
-        this._idNumber = null;
+        this.theIdNumber = null;
     }
 
     @Override
@@ -37,22 +37,22 @@ public class IdentificationNumber implements ValueObject, Comparable<Identificat
         }
 
         final IdentificationNumber other = (IdentificationNumber) o;
-        return _idNumber.equals(other._idNumber);
+        return theIdNumber.equals(other.theIdNumber);
     }
 
     @Override
     public String toString() {
-        return _idNumber;
+        return theIdNumber;
     }
 
     @Override
     public int hashCode() {
-        return new HashCoder().with(_idNumber).code();
+        return new HashCoder().with(theIdNumber).code();
     }
 
     @Override
     public int compareTo(final IdentificationNumber o) {
-        return _idNumber.compareTo(o._idNumber);
+        return theIdNumber.compareTo(o.theIdNumber);
     }
 
 }
