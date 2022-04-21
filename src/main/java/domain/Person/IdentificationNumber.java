@@ -17,7 +17,7 @@ public class IdentificationNumber implements ValueObject, Comparable<Identificat
      *
      * @param idNumebr
      */
-    protected IdentificationNumber(final String idNumber) {
+    public IdentificationNumber(final String idNumber) {
         BusinessValidation.nonEmpty(idNumber,"identification number should neither be null nor empty");
         this.theIdNumber = idNumber;
     }
