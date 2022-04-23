@@ -40,7 +40,7 @@ public class BaseRepository <T,K> implements IBaseRepository<T,K> {
     }
 
     public Optional<K> findById(final T id) {
-        return Optional.ofNullable(this.entityManager.find(this.entityClass,id,LockModeType.OPTIMISTIC));
+        return Optional.ofNullable(this.entityManager.find(this.entityClass,id,LockModeType.PESSIMISTIC_READ));
     }
 
     private RuntimeException handlePersistenceException(final PersistenceException ex) {

@@ -2,6 +2,7 @@ package domain.Person;
 
 import domain.shared.ValueObject;
 import util.BusinessValidation;
+
 import javax.persistence.Embeddable;
 
 @Embeddable

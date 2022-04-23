@@ -4,9 +4,11 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
              version="2.2">
   <persistence-unit name="UPskillPU" transaction-type="RESOURCE_LOCAL">
-    <!--provider>org.eclipse.persistence.jpa.PersistenceProvider</provider-->
-    <!--exclude-unlisted-classes>false</exclude-unlisted-classes-->
     <class>domain.Person.Person</class>
+    <class>domain.Car_Group.CarGroup</class>
+    <class>domain.Car.Car</class>
+    <class>domain.Contract.Contract</class>
+    <class>domain.Driver.Driver</class>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
       <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@vsrvbd1.dei.isep.ipp.pt:1521/pdborcl" />
@@ -15,11 +17,10 @@
 
       <!--property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
       <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/db/upskillDB"/>
-  
       <property name="javax.persistence.jdbc.user" value="upskill"/>
       <property name="javax.persistence.jdbc.password" value="upskill"/-->
-<!--      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
-      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
 
     </properties>
   </persistence-unit>

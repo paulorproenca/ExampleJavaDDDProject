@@ -1,9 +1,9 @@
 package domain.Person;
 
-import domain.shared.Identifiable;
 import domain.shared.ValueObject;
 import util.BusinessValidation;
 import util.HashCoder;
+
 import javax.persistence.Embeddable;
 
 @Embeddable

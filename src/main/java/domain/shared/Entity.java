@@ -22,8 +22,6 @@ package domain.shared;
 
 import java.io.Serializable;
 
-import domain.shared.Identifiable;
-
 /**
  * An entity is a Domain-Driven Design pattern for concepts in the domain which
  * have a thread of continuity which needs to be tracked.

@@ -1,6 +1,5 @@
 package repository.Shared;
 import java.util.Optional;
-import domain.shared.AggregateRoot;
 
 public interface IBaseRepository<I /*extends Comparable<I>*/,T /*extends AggregateRoot*/> {
 
